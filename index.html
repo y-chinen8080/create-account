@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>GitHubアカウントを作成してみよう</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+        <h1>GitHubアカウントを作成してみよう</h1>
+        <p>GitHubアカウントの作成と2要素認証設定までの手順を解説します。</p>
+        <div class="mt-5">
+            <h2>0.事前準備</h2>
+            <p>アカウントを作成する前に、下記のものを準備しましょう。</p>
+            <ul>
+                <li>メールアドレス</li>
+                <li>スマートフォンまたは電話番号(2要素認証の際、どちらかを利用します)</li>
+            </ul>
+        </div>
+        <div class="mt-4">
+            <h2>1.Topページからアカウント作成画面へ</h2>
+            <p><a href="https://github.co.jp/">Topページ</a>にアクセスし、画面右上の<strong>サインアップ</strong>をクリック。</p>
+            <img src="images/top.PNG">
+        </div>
+        <div class="mt-4">
+            <h2>2.各種情報設定</h2>
+            <p>この画面では以下の情報を設定します。</p>
+            <ul>
+                <li>
+                    Username(入力必須項目)
+                </li>
+                <li>
+                    Email address(入力必須項目)
+                </li>
+                <li>
+                    Password(入力必須項目)
+                </li>
+                <li>
+                    Email preference
+                </li>
+            </ul>
+            <img src="images/signup.PNG">
+            <p>Usernameは、英数字とハイフンのみ使用出来ます。ハイフンは最初と最後には利用できません。</p>
+            <p>Passwordは、「数字と小文字を含めて8文字以上」または「16文字で任意の文字の組み合わせ」のどちらかの条件を満たすものを入力してください。</p>
+            <p>Email preferenceは、製品のアップデートやお知らせなどの通知をメールで受け取るかどうかの設定です。</p>
+            <p>通知を受け取りたい方はチェックを入れてください。</p>
+            <p>Verify your accountは、内容が人により異なります。</p>
+            <p>全ての設定が完了したら、<strong>Create Account</strong>をクリックしましょう。</p>
+        </div>
+        <div class="mt-4">
+            <h2>3.アンケート</h2>
+            <p>仕事やプログラミング経験、GitHubの利用方法などユーザーの属性や興味関心についてのアンケート画面です。<br />
+            回答しなくても「Complete setup」ボタンをクリックして次に進むことも出来ます。</p>
+            <img src="images/2-1.PNG">
+            <img style="margin-left: 120px;" src="images/2-2.PNG">
+        </div>
+        <div class="mt-4">
+            <h2>4.確認メールの確認</h2>
+            <p>2の画面で入力したメールアドレスに確認メールが送信されます。</p>
+            <p>メールの本文中にある<strong>Verify email address</strong>ボタンをクリックしましょう。</p>
+            <img src="images/VerifyMail.PNG">
+            <p>メールが届かないという方は、ブラウザに表示されているこちらの画面でメールアドレスを確認して、再度メールを送信しましょう。</p>
+            <img src="images/verifymailPage.PNG">
+        </div>
+        <div class="mt-4">
+            <h2>5.登録完了</h2>
+            <p><strong>Verify email Address</strong>をクリックするとブラウザで下記のページが表示されたら、アカウント作成完了です。</p>
+            <img src="images/finish.PNG">
+        </div>
+        <div class="mt-4">
+            <h2>6. 2要素認証(Two-factor authentication)</h2>
+            <p>セキュリティの観点から、2要素認証(Two-factor authentication)を設定することを強く推奨します。</p>
+            <div class="mb-2 ml-3 mr-3">
+                <h3>6-0.TOTP(時間ベースのワンタイムパスワード)アプリのダウンロード</h3>
+                <p>今回はアプリでコードを取得する方法を選択します。(手順6-4)<br />
+                <a href="https://docs.github.com/ja/github/authenticating-to-github/configuring-two-factor-authentication">こちらのヘルプ</a>に記載されているアプリのいずれかか、GoogleのAuthenticatorアプリが利用出来ます。</p>
+                <h3>6-1.右上のアイコンをクリックして表示されたメニューから<strong>Settings</strong>をクリック</h3>
+                <h3>6-2.左側のメニューから<strong>Security</strong>をクリック</h3>
+                <img class="mb-5" src="images/security.png">
+                <h3>6-3.<strong>Two-factor authentication</strong>項目から設定</h3>
+                <p>「Enable two-factor authentication」ボタンをクリック</p>
+                <img class="mb-5" src="images/2FactorAuthentication-0.PNG">
+                <h3>6-4.アプリかSMSのどちらを利用するか選択</h3>
+                <p>サインインする際にユーザー名(またはメールアドレス)とパスワード以外にコードを入力する必要があります。<br/>
+                    そのコードを受け取る方法をアプリかSMSのどちらかで設定することが出来ます。<br />
+                    今回はアプリを利用しようと思うので、「Set up using an app」ボタンをクリック。
+                </p>
+                <img class="mb-5" src="images/2FactorAuthentication1.PNG">
+                <h3>6-5.リカバリーコード画面</h3>
+                <p>万が一2Factor Authコードが受け取れない状況になった場合、この画面に記載されているコードを入力する必要があります。<br>
+                大事なコードなので、ダウンロードや印刷、コピーのどれかを選択して管理するようにしてください。</p>
+                <img class="mb-5" src="images/RecoveryCode.PNG">
+                <h3>6-6.QRコード画面</h3>
+                <p>スマホ等にダウンロードしたAuthenticatorアプリを起動して、画面に表示されたQRコードを読み取りましょう。<br />
+                アプリに6桁のコード(数字)が表示されるので、入力して「Enable」ボタンをクリック。
+                </p>
+                <img class="mb-5" src="images/Authenticator.PNG">
+                <h3>6-7.設定完了</h3>
+                <p>こちらの画面が表示されるとTwo-facor suthenticationの設定は完了です。</p>
+                <img src="images/Authenticator-complete.PNG">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
